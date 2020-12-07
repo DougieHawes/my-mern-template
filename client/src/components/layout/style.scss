@@ -1,0 +1,9 @@
+@import "../../variables.scss";
+
+.navbar {
+  background-color: $colour1;
+  padding: 6px $paddingx;
+  * {
+    color: $colour4;
+  }
+}

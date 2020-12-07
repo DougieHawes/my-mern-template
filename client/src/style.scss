@@ -1,0 +1,29 @@
+@import "variables.scss";
+
+::-webkit-scrollbar {
+  width: 14px;
+  background-color: rgba($color: $colour4, $alpha: 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $colour1;
+}
+
+* {
+  font-family: $font;
+  margin: 0;
+}
+
+.app {
+  background-color: $colour4;
+  color: $colour3;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  .route-box {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 14px $paddingx;
+  }
+}
