@@ -10,7 +10,7 @@ import Signin from "../routes/auth/Signin.js";
 const Navbar = () => {
   const [showModal, setModal] = useState(false);
   const [showSignin, setSignin] = useState(false);
-  const [isLogged, setLogged] = useState(false);
+  const [isLogged, setLogged] = useState(true);
 
   return (
     <nav className="navbar">
