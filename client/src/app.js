@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Route } from "react-router-dom";
+
 import "./style.min.css";
 
 import Navbar from "./components/layout/Navbar";
@@ -11,7 +13,7 @@ const App = () => {
     <div className="app">
       <Navbar />
       <div className="route-box">
-        <Landing />
+        <Route exact path="/" component={Landing} />
       </div>
     </div>
   );

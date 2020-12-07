@@ -2,8 +2,66 @@
 
 .navbar {
   background-color: $colour1;
+  display: flex;
+  justify-content: space-between;
   padding: 6px $paddingx;
+  .navbar-title {
+  }
+  .navbar-links {
+    display: flex;
+    .navbar-link {
+      cursor: pointer;
+      font-size: 21px;
+      margin-left: 14px;
+    }
+  }
   * {
     color: $colour4;
+  }
+
+  .modal-container {
+    background-color: rgba($color: $colour3, $alpha: 0.42);
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .modal {
+      background-color: $colour4;
+      border: 2px solid $colour1;
+      margin: 140px auto;
+      padding-bottom: 28px;
+      position: relative;
+      width: 420px;
+      .close-modal {
+        bottom: 0;
+        color: $colour3;
+        cursor: pointer;
+        font-size: 18px;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+      }
+      .modal-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        .modal-tab {
+          cursor: pointer;
+          font-size: 28px;
+          padding: 3px;
+          text-align: center;
+        }
+        .modal-tab-closed {
+          background-color: $colour1;
+          color: $colour4;
+        }
+      }
+    }
+    * {
+      color: $colour1;
+    }
   }
 }
