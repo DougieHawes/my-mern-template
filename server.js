@@ -2,16 +2,6 @@ require("dotenv").config();
 
 const chalk = require("chalk");
 
-// express server setup
-const express = require("express");
-const app = express();
-
-const port = process.env.PORT || 8000;
-
-app.listen(port, () =>
-  console.log(chalk.green(`express app running on port:${port}`))
-);
-
 // mongo databse connection
 const mongoose = require("mongoose");
 
@@ -21,6 +11,16 @@ mongoose.connect(
   mongoUri,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => console.log(chalk.magenta("mongo database connected"))
+);
+
+// express server setup
+const express = require("express");
+const app = express();
+
+const port = process.env.PORT || 8000;
+
+app.listen(port, () =>
+  console.log(chalk.green(`express app running on port:${port}`))
 );
 
 // express routes

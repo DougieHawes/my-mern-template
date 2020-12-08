@@ -1,7 +1,10 @@
 const router = require("express").Router();
 
-router.get("/", (req, res) => {
-  res.send("user route");
-});
+const { getUsers, newUser } = require("../../helpers/auth");
+
+const isAuth = require("../../middleware/isAuth");
+
+router.get("/", isAuth, getUsers);
+router.post("/new-user", newUser);
 
 module.exports = router;
